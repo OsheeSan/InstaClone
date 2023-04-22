@@ -8,22 +8,82 @@
 import UIKit
 
 class LoginVC: UIViewController {
+    
+    let usernameTextField: UITextField = {
+        let field = UITextField()
+        return field
+    }()
+    
+    let passwordTextField: UITextField = {
+        let field = UITextField()
+        field.isSecureTextEntry = true
+        return field
+    }()
+    
+    let loginButton: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
+    let signUpButton: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
+    let termsButton: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
+    let privacyButton: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
+    let headerView: UIView = {
+        return UIView()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        addSubviews()
+        view.backgroundColor = .systemBackground
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        
     }
-    */
+    
+    private func addSubviews(){
+        view.addSubview(usernameTextField)
+        
+        view.addSubview(passwordTextField)
+        
+        view.addSubview(loginButton)
+        
+        view.addSubview(signUpButton)
+        
+        view.addSubview(termsButton)
+        
+        view.addSubview(privacyButton)
+        
+        view.addSubview(headerView)
+    }
+    
+    @objc private func didTapLoginButton(){
+        
+    }
+    
+    @objc private func didTapTermButton(){
+        
+    }
+    
+    @objc private func didTapPrivacyButton(){
+        
+    }
+    
+    @objc private func didTapSignUpButton(){
+        
+    }
 
 }
